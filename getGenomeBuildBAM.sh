@@ -18,6 +18,12 @@ case $GENOME_MD5 in
     echo "hg19"
     ;;
 
+    933b376d936c265fc6b44c8bd19fc66d)
+    # TCGA BAMs UR:ftp://ftp.ncbi.nih.gov/genbank/genomes/Eukaryotes/vertebrates_mammals/Homo_sapiens/GRCh37/special_requests/GRCh37-lite.fa.gz
+    # AS:GRCh37-lite (b37-ish)
+    echo "GRCh37-lite"
+    ;;
+
     d660fd17a979374182d3ba8b6d76cac0)
     # UCSC mm10 /ifs/depot/assemblies/M.musculus/mm10/mm10.dict
     echo "mm10"
