@@ -34,6 +34,11 @@ case $GENOME_MD5 in
     echo "mm10_hBRAF_V600E"
     ;;
 
+    f9cd233a3d5c9540eece434c65f84f1c)
+    # mm9 Full
+    echo "mm9Full"
+    ;;
+
     *)
     echo "unknown" $GENOME_MD5
     ;;
