@@ -13,6 +13,11 @@ case $GENOME_MD5 in
     echo "b37"
     ;;
 
+    117fce86b797081e0af6d69cbd94dcde)
+    # b37 version used by DMP pipeline
+    echo "b37"
+    ;;
+
     5b4e380a6b4fc3494cfc66c917d41b37)
     # UCSC hg19 /ifs/depot/assemblies/H.sapiens/hg19/hg19.dict
     echo "hg19"
