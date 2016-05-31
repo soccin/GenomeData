@@ -15,7 +15,7 @@ case $GENOME_MD5 in
 
     117fce86b797081e0af6d69cbd94dcde)
     # b37 version used by DMP pipeline
-    echo "b37"
+    echo "b37_dmp"
     ;;
 
     5b4e380a6b4fc3494cfc66c917d41b37)
