@@ -5,7 +5,9 @@ if [ "$#" != "1" ]; then
     exit
 fi
 
-GENOME_MD5=$(samtools view -H $1 | egrep "^@SQ" | cut -f-3 | sort  | md5sum - | awk '{print $1}')
+SAMTOOLS=/opt/common/CentOS_6-dev/bin/current/samtools
+
+GENOME_MD5=$($SAMTOOLS view -H $1 | egrep "^@SQ" | cut -f-3 | sort  | md5sum - | awk '{print $1}')
 
 case $GENOME_MD5 in
     b879c678e7fd80718cf20d10c6b846e4)
@@ -21,6 +23,11 @@ case $GENOME_MD5 in
     5b4e380a6b4fc3494cfc66c917d41b37)
     # UCSC hg19 /ifs/depot/assemblies/H.sapiens/hg19/hg19.dict
     echo "hg19"
+    ;;
+
+    3d72c6961689390556ed2d5a33e66e17)
+    # Main chromosomes only (used by cfDNA collaboration)
+    echo "hg19-mainOnly"
     ;;
 
     933b376d936c265fc6b44c8bd19fc66d)
