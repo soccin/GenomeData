@@ -38,7 +38,7 @@ case $GENOME_MD5 in
 
     7f8c5323ff7e0ff6b5d40efe53eaf050)
     # BIC Xeno-graph genome
-    echo "b37+MM10"
+    echo "b37+mm10"
 
     d660fd17a979374182d3ba8b6d76cac0)
     # UCSC mm10 /ifs/depot/assemblies/M.musculus/mm10/mm10.dict
