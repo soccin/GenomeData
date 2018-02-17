@@ -56,6 +56,11 @@ case $GENOME_MD5 in
     echo "mm9Full"
     ;;
 
+    0835b244e0adb20253e5fa1c4ee58ec4)
+    # mouse_GRCm38
+    echo "GRC_m38"
+    ;;
+
     *)
     echo "unknown" $GENOME_MD5
     ;;
