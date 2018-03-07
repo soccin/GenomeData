@@ -61,6 +61,11 @@ case $GENOME_MD5 in
     echo "GRC_m38"
     ;;
 
+    6a3985296926fb48fd65ba5feae4e640)
+    # Relabling of mm10 chr1=>1
+    echo "mm10-relabel"
+    ;;
+
     *)
     echo "unknown" $GENOME_MD5
     ;;
