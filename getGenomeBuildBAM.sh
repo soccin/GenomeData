@@ -5,13 +5,17 @@ if [ "$#" != "1" ]; then
     exit
 fi
 
-SAMTOOLS=/opt/common/CentOS_6-dev/bin/current/samtools
+SAMTOOLS=$(which samtools)
+if [ $SAMTOOLS == "" ]; then
+    echo samtools not in current path
+    exit -1
+fi
 
 GENOME_MD5=$($SAMTOOLS view -H $1 | egrep "^@SQ" | cut -f-3 | sort  | md5sum - | awk '{print $1}')
 
 case $GENOME_MD5 in
     b879c678e7fd80718cf20d10c6b846e4)
-    # b37 gatk /ifs/depot/assemblies/H.sapiens/b37/b37.dict
+    # b37 gatk /juno/depot/assemblies/H.sapiens/b37/b37.dict
     echo "b37"
     ;;
 
@@ -21,7 +25,7 @@ case $GENOME_MD5 in
     ;;
 
     5b4e380a6b4fc3494cfc66c917d41b37)
-    # UCSC hg19 /ifs/depot/assemblies/H.sapiens/hg19/hg19.dict
+    # UCSC hg19 /juno/depot/assemblies/H.sapiens/hg19/hg19.dict
     echo "hg19"
     ;;
 
@@ -42,7 +46,7 @@ case $GENOME_MD5 in
     ;;
 
     d660fd17a979374182d3ba8b6d76cac0)
-    # UCSC mm10 /ifs/depot/assemblies/M.musculus/mm10/mm10.dict
+    # UCSC mm10 /juno/depot/assemblies/M.musculus/mm10/mm10.dict
     echo "mm10"
     ;;
 
@@ -54,6 +58,11 @@ case $GENOME_MD5 in
     f9cd233a3d5c9540eece434c65f84f1c)
     # mm9 Full
     echo "mm9Full"
+    ;;
+
+    0835b244e0adb20253e5fa1c4ee58ec4)
+    # mouse_GRCm38
+    echo "GRC_m38"
     ;;
 
     *)
